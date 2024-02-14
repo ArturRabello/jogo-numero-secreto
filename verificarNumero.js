@@ -7,12 +7,20 @@ function exibeChuteNaTela(chute){
 function verificarValidadeChute(chute){
     const numero = +chute;
 
-    chutarInvalido(numero)? elementoChute.innerHTML = 
-    `<div>Você disse: </div>
-        <span class="box">${chute}</span>
-    <div>valor inválido</div> `
-    : ""
-
+    if(chutarInvalido(numero)){
+        if(chute == 'game over'){
+            recognition.addEventListener('end', () => recognition.stop());
+                return document.body.innerHTML = `
+                <h2>Game Over!</h2>
+                <button id="btn-start" class="btnStart">Jogar Novamente</button>`
+            }else{
+                return elementoChute.innerHTML = 
+                 `<div>Você disse: </div>
+                <span class="box">${chute}</span>
+                <div>valor inválido</div> `
+            }
+        }
+    
     numeroMaiorOuMenorQuePermitido(numero)? 
     elementoChute.innerHTML = 
     `<div>Você disse: </div>
@@ -54,3 +62,4 @@ function verificarIgualdadeNumSecreto(numero){
         return elementoChute.innerHTML += `<div>O número secreto é maior <i class="fa-solid fa-arrow-up"></i></div>`
     }
 }
+
