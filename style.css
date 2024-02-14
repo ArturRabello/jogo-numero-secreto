@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+:root{
+    --font-family:'Single Day', cursive;
+    --background-color:#04364A;
+    --primary-color:#DAFFFB;
+    --btn-action-color:#192655;
+}
+
+body{
+    background-color: var(--background-color);
+    color:var(--primary-color);
+    min-height: 100vh;
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    text-align: center;
+    font-family: var(--font-family) ;
+}
+
+H1{
+    font-size: 5em;
+}  
+
+H2{
+    font-size: 3em;
+}
+
+h3{
+    font-size: 2em;
+    margin-top: 20px ;
+}  
+
+.mensagem{
+    font-size: 1.5em;
+    margin-top: 40px;
+}
+
+.box{
+    border: 2px solid var(--primary-color);
+    display:inline-block;
+    font-size: 4em ;
+    padding: 20px;
+    margin: 20px;
+}
+
+.btnStart{
+    padding: 1em ;
+    margin-top: 1em;
+    border-radius: 10%;
+    border:0;
+    background-color: var(--primary-color);
+}
+
+.btn-start-mouseEmCima{
+    padding: 1em ;
+    margin-top: 1em;
+    border-radius: 10%;
+    border-width: 8px;
+    border-color: yellowgreen;
+    background-color: var(--primary-color);
+    color:var(--btn-action-color);
+}
